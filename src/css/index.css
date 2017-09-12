@@ -1,0 +1,585 @@
+/*------------------common start------------------*/
+.xmpp-box *{
+    -weblot-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.xmpp-box ul,
+.xmpp-box ol {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+.xmpp-box input,
+.xmpp-box select,
+.xmpp-box textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+.xmpp-box textarea {
+    resize: none;
+}
+.xmpp-box .fl {
+    float: left;
+}
+.xmpp-box .fr {
+    float: right;
+}
+.xmpp-box .fix:after {
+    content: "";
+    clear: both;
+    display: block
+}
+.xmpp-box .dn {
+    display: none;
+}
+.xmpp-box .pr{
+    position: relative;
+}
+.xmpp-box .cursor-pointer{
+    cursor: pointer;
+}
+.xmpp-box .hidden{
+    display: none;
+}
+.xmpp-close-btn {
+    font-size: 100%;
+    line-height: 1;
+    color: #666;
+    cursor:pointer;
+}
+.xmpp-close-btn:hover {
+    color: #000;
+}
+.xmpp-box-shadow{
+    box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+}
+.xmpp-box input.form-input {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e6e6e6;
+    padding: 0 5%;
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.xmpp-box input.form-input:focus {
+    border-color: #C9C9C9 !important;
+}
+.xmpp-box label.form-name {
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    width: 100%;
+}
+.xmpp-button{
+    line-height: 2em;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 16px;
+}
+.xmpp-button:hover{
+    opacity: 0.9;
+}
+.xmpp-button:active{
+    -webkit-box-shadow: inset 0 3px 10px rgba(0,0,0,.3);
+    box-shadow: inset 0 3px 10px rgba(0,0,0,.3);
+}
+.xmpp-button.xmpp-button-main{
+    background: #5fb878;
+    color: #ffffff;
+}
+.xmpp-button.xmpp-button-default{
+    background: #dedede;
+    color: #666;
+}
+.xmpp-button.xmpp-button-warning{
+    background: #cc0000;
+    color: #fff;
+}
+
+.xmpp-user-img{
+    border-radius:50%;
+    overflow: hidden;
+}
+.xmpp-user-img>img{
+    width: 100%;
+}
+.xmpp-user-img-sm{
+    width: 36px;
+    height: 36px;
+}
+.xmpp-user-img-s{
+    width: 50px;
+    height: 50px;
+}
+/*------------------common end---------------*/
+
+.contact-list-item.online{
+    color: #3c3;
+}
+.contact-list-item.away{
+    color: #c33;
+}
+.contact-list-item.offline{
+    color: #cccccc;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+.contact-list-item.chat-item-tab.on{
+    background: #999;
+}
+
+.contact-wp {
+    width: 260px;
+    height: 520px;
+    background: #fff;
+}
+.contact-tt {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    background: #ddd;
+}
+.contact-cont {
+    overflow: hidden;
+    height: 460px;
+    position: relative;
+}
+.contact-list {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    width: 100%;
+}
+.contact-list-item {
+    position: relative;
+    height: 42px;
+    padding: 5px 15px 5px 60px;
+    font-size: 0;
+    cursor: pointer;
+}
+.contact-list-item:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.contact-list-item .tt {
+    position: absolute;
+    left: 15px;
+    /* top: 8px; */
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+.contact-list-item .name {
+    /* margin-top: 10px; */
+    max-width: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;  *
+    display: inline;  *
+    zoom: 1;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 36px;
+}
+.contact-list-item .num {
+    /* margin-top: 10px; */
+    margin: 0 20px;
+    display: inline-block;  *
+    display: inline;  *
+    zoom: 1;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 36px;
+}
+.contact-list-item .del {
+    height:  1em;
+    width:  1em;
+    line-height: 1em;
+    background: red;
+    display: none;
+    margin-top: 10px;
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 100%;
+}
+.contact-list-item:hover .del {
+    display: inline-block;
+}
+.contact-tt-name {
+    display: inline-block;
+}
+.contact-tt-handle{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: 30px;
+    font-size: 24px;
+}
+
+
+
+
+.xmpp-chat-box{
+    width: 600px;
+    background-image: url(../img/bg.jpg);
+    background-color: #fff;
+    background-size: cover;
+    border-top: 3px solid #e6e6e6;
+}
+.chat-multiple-box.xmpp-chat-box {
+    width: 800px;
+}
+.chat-multiple-box .xmpp-chat-box-slider{
+    display: block;
+}
+.chat-multiple-box .xmpp-chat-box-main {
+    margin-left: 200px;
+}
+
+.xmpp-chat-box-slider{
+    width: 200px;
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #D9D9D9;
+}
+.xmpp-chat-box-slider-item {
+    position: relative;
+    margin: 5px;
+    padding: 5px 30px 5px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+.xmpp-chat-box-slider-item:hover{
+    background-color: #E2E2E2;
+}
+.xmpp-chat-box-slider-item:hover .close{
+    display: inline-block;
+}
+.xmpp-chat-box-slider-item.cur {
+    background: #f3f3f3;
+}
+.xmpp-chat-box-slider-item .tt {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    vertical-align:middle;
+}
+
+.xmpp-chat-box-slider-item .name {
+    width: 100px;
+    padding-left: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.xmpp-chat-box-slider-item .close{
+    display: none;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 100%;
+    background: #555;
+    height: 1em;
+    line-height: 18px;
+    width: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+.xmpp-chat-box-slider-item .close:hover{
+    background: red;
+}
+
+
+.xmpp-chat-box-item{
+    position: relative;
+    height:100%;
+    background: rgba(255,255,255,0.8);
+}
+.xmpp-box-handle{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 1em;
+}
+.xmpp-chat-box-item-title{
+    border-bottom: none;
+    background-color: #F8F8F8;
+    background-color: rgba(200,200,200,0.7);
+    padding: 15px;
+    cursor: move;
+}
+.xmpp-chat-box-item-title-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.xmpp-chat-box-item-title-img > img{
+    width:100%;
+}
+.xmpp-chat-box-item-title-info{
+    padding: 5px;
+    padding-left: 15px;
+}
+.xmpp-chat-box-item-title-info>span{
+    line-height: 20px;
+    font-size: 14px;
+    display: block;
+}
+.xmpp-chat-box-item-title-info .status{
+    color:#FF5722;
+}
+.xmpp-box-chat-main{
+    height: 262px;
+    padding: 0 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center
+}
+.xmpp-box-chat-main li{
+    width: 100%;
+    height:auto;
+    margin: 10px 0;
+}
+.xmpp-box-chat-info{
+    text-align: left;
+    width:auto;
+    margin-left: 51px;
+}
+.xmpp-box-chat-mine .xmpp-box-chat-info{
+    margin-left: 0;
+    margin-right: 51px;
+    text-align: right;
+    color: #fff;
+}
+.xmpp-box-chat-info .desc{
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+}
+.xmpp-box-chat-info .desc .name{
+    margin-right: 10px;
+}
+.xmpp-box-chat-mine .xmpp-box-chat-info .desc .name{
+    margin-left: 10px;
+}
+.xmpp-box-chat-info .msg{
+    display: inline-block;
+    background: #aaa;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    max-width: 480px;
+}
+.xmpp-box-chat-info .msg>span{
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-top:  1em solid  #aaa;
+    position: absolute;
+    left: -1em;
+    top: 1em;
+}
+.xmpp-box-chat-mine .xmpp-box-chat-info .msg{
+    background: #5fb878;
+}
+.xmpp-box-chat-mine .xmpp-box-chat-info .msg>span{
+    width: 0;
+    height: 0;
+    border-left: none;
+    border-top: none;
+    border-right: 1em solid transparent;
+    border-top: 1em solid #5fb878;
+    top: 1em;
+    right: -1em;
+    left: auto;
+}
+.xmpp-box-chat-mine .xmpp-box-chat-info .msg img{
+    max-width:100%;
+    max-height:260px;
+}
+.xmpp-box-chat-footer{
+    /*height: 200px;*/
+    border-top: 1px solid #ddd;
+}
+.xmpp-box-chat-footer .default-text{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    color: #999;
+}
+.xmpp-box-chat-tool{
+    height: 38px;
+    line-height: 38px;
+}
+.xmpp-box-chat-query-history {
+    font-size: 12px;
+    line-height:2;
+    color: #5fb878;
+    cursor: pointer;
+}
+.xmpp-chat-box-item-text-area{
+    height: 138px;
+}
+.xmpp-box-chat-bottom{
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.contact-handle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.contact-handle a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    color: #999;
+}
+
+.contact-handle a:hover {
+    color: #5fb878;
+}
+
+.chat-tip-box {
+    width: 300px;
+    background: #fff;
+    height:100%;
+}
+
+.chat-tip-tt {
+    background: #ddd;
+    line-height: 38px;
+    padding: 0 15px;
+    font-size: 14px;
+    cursor: move;
+}
+.chat-tip-tt-handle{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+}
+.chat-tip-cont {
+    padding: 15px;
+}
+.chat-tip-handle {
+    text-align: right;
+    margin: 10px 0;
+}
+.chat-tip-btn {
+    margin-right: 15px;
+}
+.xmpp-contact-us{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+
+    font-size: 14px;
+    color: #fff;
+    background: #999;
+    line-height: 1em;
+    padding:0.5em 1em;
+    text-align: center;
+    cursor: pointer;
+}
+.xmpp-shake-animate
+{
+    animation:xmpp-shake .5s;
+    -moz-animation:xmpp-shake .5s; /* Firefox */
+    -webkit-animation:xmpp-shake .5s; /* Safari and Chrome */
+    -o-animation:xmpp-shake .5s; /* Opera */
+}
+@keyframes xmpp-shake
+{
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+@-moz-keyframes xmpp-shake
+{
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+@-webkit-keyframes  xmpp-shake
+{
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+@-o-keyframes  xmpp-shake
+{
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
